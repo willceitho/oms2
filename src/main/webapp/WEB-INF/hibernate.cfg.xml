@@ -12,12 +12,12 @@
 		<!--<property name="hibernate.connection.url">jdbc:jtds:sqlserver://CLASS49/_112_OMS;instance=SQLEXPRESS;</property>-->
 <!-- 		<property name="hibernate.connection.url">jdbc:jtds:sqlserver://ssu-sql12/Lv117proba;instance=tc;</property> -->
 <!-- 		<property name="hibernate.connection.url">jdbc:jtds:sqlserver://192.168.195.146/Oms;instance=SSU-SQL;</property> -->
-		<property name="hibernate.connection.url">jdbc:mysql://192.168.0.162:3306/test_env</property>
+		<property name="hibernate.connection.url">$JDBCURL</property>
 
 <!-- 		<property name="hibernate.connection.username">Oms2020</property> -->
 <!-- 		<property name="hibernate.connection.password">Oms_2020!</property> -->
-		<property name="hibernate.connection.username">worker</property>
-		<property name="hibernate.connection.password">qweqweqwE_1</property>
+		<property name="hibernate.connection.username">DB_USER</property>
+		<property name="hibernate.connection.password">DB_PASS</property>
 
 		<!-- property name="hibernate.hbm2ddl.auto">create</property>  -->
 		<property name="hibernate.hbm2ddl.auto">update</property>
