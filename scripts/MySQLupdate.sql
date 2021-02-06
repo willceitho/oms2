@@ -1,0 +1,12 @@
+use test_env;
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='1';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='2';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='3';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='4';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='5';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='6';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='7';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='8';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='9';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='10';
+UPDATE `test_env`.`Users` SET `IsUserActive`=1 WHERE `ID`='11';
