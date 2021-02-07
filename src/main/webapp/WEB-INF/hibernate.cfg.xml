@@ -16,8 +16,8 @@
 
 <!-- 		<property name="hibernate.connection.username">Oms2020</property> -->
 <!-- 		<property name="hibernate.connection.password">Oms_2020!</property> -->
-		<property name="hibernate.connection.username">DB_USER</property>
-		<property name="hibernate.connection.password">DB_PASS</property>
+		<property name="hibernate.connection.username">$DB_USER</property>
+		<property name="hibernate.connection.password">$DB_PASS</property>
 
 		<!-- property name="hibernate.hbm2ddl.auto">create</property>  -->
 		<property name="hibernate.hbm2ddl.auto">update</property>
