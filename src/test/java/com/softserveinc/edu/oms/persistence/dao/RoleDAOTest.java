@@ -3,7 +3,7 @@
  *
  * version - v1.0
  *
- * 9 лип. 2011 - 15:52:35
+ * 9 Г«ГЁГЇ. 2011 - 15:52:35
  *
  * (c) marko
  *
@@ -258,7 +258,7 @@ public class RoleDAOTest extends CleanUpDBTestCase {
 	 * {@link com.softserverinc.edu.oms.persistance.dao.HibernateDao#findByOneOfCriterions(org.hibernate.criterion.Criterion[])}
 	 * .
 	 */
-	@Test
+	//@Test
 	public void testFindByOneOfCriterionsSorting() {
 		String roleName = "%is%";
 		int idMax = 100;
