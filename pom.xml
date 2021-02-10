@@ -360,7 +360,7 @@
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <configuration>
-        <classesDirectory>${project.build.directory}/generated-classes/emma/classes</classesDirectory>
+<!--         <classesDirectory>${project.build.directory}/generated-classes/emma/classes</classesDirectory> -->
         <skipTests>false</skipTests> 
     </configuration>
 </plugin>
