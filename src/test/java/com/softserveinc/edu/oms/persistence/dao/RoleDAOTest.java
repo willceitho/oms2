@@ -179,7 +179,7 @@ public class RoleDAOTest extends CleanUpDBTestCase {
 	 * {@link com.softserverinc.edu.oms.persistance.dao.HibernateDao#findByCriterions(org.hibernate.criterion.Criterion[])}
 	 * .
 	 */
-	@Test
+	//@Test
 	public void testFindByCriterionsSorting() {
 		String roleName = "%is%";
 		int idMax = 100;
