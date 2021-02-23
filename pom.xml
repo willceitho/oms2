@@ -361,7 +361,7 @@
     <artifactId>maven-surefire-plugin</artifactId>
     <configuration>
 <!--         <classesDirectory>${project.build.directory}/generated-classes/emma/classes</classesDirectory> -->
-        <skipTests>false</skipTests> 
+        <skipTests>true</skipTests> 
     </configuration>
 </plugin>
 
