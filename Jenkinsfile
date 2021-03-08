@@ -14,7 +14,7 @@ pipeline {
         stage('Build App') {
             steps{
                 sh 'mvn clean package'
-                sh 'echo $MYSQL_USER $DOCKERHUB_USERNAME'
+                sh 'echo $MYSQL_USER $DOCKERHUB_USERNAME $PS1 $PWD'
             }
         }
     }
