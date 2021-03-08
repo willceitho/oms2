@@ -6,17 +6,14 @@ pipeline {
         }
     }
     stages {
-        stage('Build') {
+        stage('Test App') {
             steps {
-                sh 'mvn clean'
-                sh 'mvn test'
-                sh 'mvn build'
+                sh 'mvn clean test'
             }
         }
-        stage('Two_build') {
+        stage('Build App') {
             steps{
-                sh 'pwd'
-                sh 'ls'
+                sh 'mvn clean package'
             }
         }
     }
