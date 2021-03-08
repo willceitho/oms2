@@ -13,12 +13,13 @@ pipeline {
         }
         stage('Build App') {
             steps{
-                sh 'mvn clean package'
-                sh 'echo $MYSQL_USER $DOCKERHUB_USERNAME $PS1 $PWD'
-                sh 'echo $MYSQL_USER'
-                echo MYSQL_USER
-                echo "username is $DOCKERHUB_USERNAME"
-
+                withCredentials([usernamePassword(credentialsId: 'new_key', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+                    sh 'mvn clean package'
+                    sh 'echo $USERNAME $DOCKERHUB_USERNAME $PS1 $PWD'
+                    sh 'echo $PASSWORD'
+                    echo USERNAME
+                    echo "username is $PASSWORD"
+                }
             }
         }
     }
