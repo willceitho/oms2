@@ -14,7 +14,7 @@ pipeline {
         stage('Build App') {
             steps{
                 sh 'mvn clean package'
-                sh 'docker version'
+                sh 'echo $MYSQL_USER $DOCKERHUB_USERNAME'
             }
         }
     }
