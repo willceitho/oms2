@@ -8,9 +8,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean package'
-                sh 'pwd'
-                sh 'ls'
+                sh 'mvn clean'
+                sh 'mvn test'
+                sh 'mvn build'
             }
         }
         stage('Two_build') {
