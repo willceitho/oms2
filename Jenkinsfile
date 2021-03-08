@@ -15,6 +15,10 @@ pipeline {
             steps{
                 sh 'mvn clean package'
                 sh 'echo $MYSQL_USER $DOCKERHUB_USERNAME $PS1 $PWD'
+                sh 'echo $MYSQL_USER'
+                echo MYSQL_USER
+                echo "username is $DOCKERHUB_USERNAME"
+
             }
         }
     }
