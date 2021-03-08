@@ -18,4 +18,16 @@ pipeline {
             }
         }
     }
+    agent {
+        docker {
+            image 'python'
+        }
+    }
+    stages {
+        stage('Test App') {
+            steps {
+                sh 'pwd && ls'
+            }
+        }
+    }
 }
