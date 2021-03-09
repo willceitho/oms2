@@ -21,7 +21,7 @@ pipeline {
                 echo " ============== docker login =================="
                 withCredentials([usernamePassword(credentialsId: 'docker_creds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     sh '''
-                    docker login -u $USERNAME --password-stdin $PASSWORD
+                    docker login -u $USERNAME -p $PASSWORD
                     '''
                 }
             }
