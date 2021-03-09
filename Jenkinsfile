@@ -18,8 +18,8 @@ pipeline {
 	parameters {
 		choice(
 			name: 'TAG',
-			choices: "latest",
-			description: "Укажите образ для сборки"
+			defaultValue: "latest",
+			description: "Tag for Image"
 		)
 	} 
     stages {
@@ -51,7 +51,7 @@ pipeline {
                     echo " ============== docker build =================="
                     sh '''
                     mvn clean package
-                    docker build -t voopnok/oms:latest . 
+                    docker build -t voopnok/oms:${params.TAG} . 
                     '''
                     
                 
@@ -61,7 +61,7 @@ pipeline {
             steps {
                 echo " ============== start pushing image =================="
                 sh '''
-                docker push voopnok/oms:latest
+                docker push voopnok/oms:${params.TAG}
                 '''
             }
         }
