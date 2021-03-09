@@ -16,7 +16,7 @@ pipeline {
                 sh 'mvn clean test'
             }
         }
-         stage('Test App') {
+         stage('Build App') {
             steps {
                 sh 'mvn clean package'
             }
@@ -31,7 +31,7 @@ pipeline {
                 }
             }
         }
-        stage('Build App') {
+        stage('Build docker image for App') {
             steps{
                     sh '''
                     mvn clean package
