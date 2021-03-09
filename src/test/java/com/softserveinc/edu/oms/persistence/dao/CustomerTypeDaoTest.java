@@ -21,7 +21,7 @@ import com.softserveinc.edu.oms.domain.entities.CustomerType;
  * 
  */
 
-// public class CustomerTypeDaoTest extends CleanUpDBTestCase {
+public class CustomerTypeDaoTest extends CleanUpDBTestCase {
 
 	private final String standart = "Standard";
 	private final String silver = "Silver";
