@@ -13,18 +13,20 @@ pipeline {
     stages {
         stage('Test App') {
             steps {
+                echo " ============== running test =================="
                 sh 'mvn clean test'
             }
         }
          stage('Build App') {
             steps {
+                echo " ============== building app =================="
                 sh 'mvn clean package'
             }
         }
          stage("docker login") {
             steps {
-                echo " ============== docker login =================="
                 withCredentials([usernamePassword(credentialsId: 'docker_creds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    echo " ============== docker login =================="
                     sh '''
                     docker login -u $USERNAME -p $PASSWORD
                     '''
@@ -33,6 +35,8 @@ pipeline {
         }
         stage('Build docker image for App') {
             steps{
+                    
+                    echo " ============== docker build =================="
                     sh '''
                     mvn clean package
                     docker build -t voopnok/oms:latest . 
