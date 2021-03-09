@@ -16,7 +16,7 @@ pipeline {
 	    	timestamps()
 	}
 	parameters {
-		choice(
+		string(
 			name: 'TAG',
 			defaultValue: "latest",
 			description: "Tag for Image"
