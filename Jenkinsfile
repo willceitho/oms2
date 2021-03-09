@@ -33,7 +33,6 @@ pipeline {
         }
         stage('Build App') {
             steps{
-                withCredentials([usernamePassword(credentialsId: 'new_key', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                     sh '''
                     mvn clean package
                     docker build -t voopnok/oms:latest . 
