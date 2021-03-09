@@ -23,7 +23,7 @@ pipeline {
 		)
 	} 
     stages {
-        stage('Test App') {
+        stage('Test App1') {
             steps {
                 echo " ============== running test =================="
                 sh """
