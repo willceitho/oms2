@@ -10,6 +10,7 @@ pipeline {
             args '-v $HOME/.m2:/root/.m2'
         }
     }
+    triggers { pollSCM('* * * * *') }
     options {
 	    	buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
 	    	timestamps()
