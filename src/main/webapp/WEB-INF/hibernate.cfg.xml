@@ -10,7 +10,7 @@
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<!--<property name="hibernate.connection.url">jdbc:jtds:sqlserver://streamer2005.softserveinc.com/_055_OMS;instance=tc;</property>-->
 		<!--<property name="hibernate.connection.url">jdbc:jtds:sqlserver://CLASS49/_112_OMS;instance=SQLEXPRESS;</property>-->
-<!-- 		<property name="hibernate.connection.url">jdbc:jtds:sqlserver://ssu-sql12/Lv117proba;instance=tc;</property> -->
+<!--  		<property name="hibernate.connection.url">jdbc:jtds:sqlserver://ssu-sql12/Lv117proba;instance=tc;</property> -->
 <!-- 		<property name="hibernate.connection.url">jdbc:jtds:sqlserver://192.168.195.146/Oms;instance=SSU-SQL;</property> -->
 		<property name="hibernate.connection.url">jdbc:mysql://10.26.3.179:3306/prod_db</property>
  
