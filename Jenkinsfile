@@ -15,11 +15,11 @@ pipeline {
 	    	buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
 	    	timestamps()
 	}
-	parameters {
-		string(
-			name: 'TAG',
-			defaultValue: "latest",
-			description: "Tag for Image"
+    parameters {
+	string(
+		name: 'TAG',
+		defaultValue: "latest",
+		description: "Tag for Image"
 		)
 	} 
     stages {
