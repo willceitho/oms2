@@ -15,7 +15,7 @@ pipeline {
 	    	timestamps()
 	}
     stages {
-        stage('Test App1') {
+        stage('Test App12') {
             steps {
                 echo " ============== running test =================="
                 sh 'mvn clean test'
