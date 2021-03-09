@@ -23,7 +23,7 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-         stage("docker login") {
+         stage("Docker Login") {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker_creds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     echo " ============== docker login =================="
@@ -45,7 +45,7 @@ pipeline {
                 
             }
         }
-        stage("docker push") {
+        stage("Docker Push") {
             steps {
                 echo " ============== start pushing image =================="
                 sh '''
