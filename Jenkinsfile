@@ -9,6 +9,9 @@ pipeline {
             image 'maven:3-openjdk-8'
             args '-v $HOME/.m2:/root/.m2'
         }
+        options {
+		    buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+		    timestamps()
     }
     stages {
         stage('Test App') {
