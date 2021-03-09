@@ -38,7 +38,7 @@ pipeline {
                     docker build -t voopnok/oms:latest . 
                     '''
                     
-                }
+                
             }
         }
         stage("docker push") {
