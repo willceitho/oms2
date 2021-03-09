@@ -16,6 +16,11 @@ pipeline {
                 sh 'mvn clean test'
             }
         }
+         stage('Test App') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
          stage("docker login") {
             steps {
                 echo " ============== docker login =================="
