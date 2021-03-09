@@ -37,5 +37,13 @@ pipeline {
                 }
             }
         }
+        stage("docker push") {
+            steps {
+                echo " ============== start pushing image =================="
+                sh '''
+                docker push voopnok/oms:latest
+                '''
+            }
+        }
     }
 }
