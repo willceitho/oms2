@@ -34,18 +34,18 @@ public class CustomerTypeDaoTest extends CleanUpDBTestCase {
 	@Before
 	public void setUp() throws Exception {
 
-		CustomerType type = new CustomerType();
-		type.setTypeName(standart);
-		type.setMinRange(0.0);
-		type.setMaxRange(9999999.9);
-		type.setDiscount(1.2);
-		customerTypeDao.insertOrUpdate(type);
-		type = new CustomerType(null, silver, 0.0, 99999.0, 1.2);
-		customerTypeDao.insertOrUpdate(type);
-		type = new CustomerType(null, gold, 0.0, 99999.0, 1.2);
-		customerTypeDao.insertOrUpdate(type);
-		type = new CustomerType(null, platinum, 0.0, 99999.0, 1.2);
-		customerTypeDao.insertOrUpdate(type);
+// 		CustomerType type = new CustomerType();
+// 		type.setTypeName(standart);
+// 		type.setMinRange(0.0);
+// 		type.setMaxRange(9999999.9);
+// 		type.setDiscount(1.2);
+// 		customerTypeDao.insertOrUpdate(type);
+// 		type = new CustomerType(null, silver, 0.0, 99999.0, 1.2);
+// 		customerTypeDao.insertOrUpdate(type);
+// 		type = new CustomerType(null, gold, 0.0, 99999.0, 1.2);
+// 		customerTypeDao.insertOrUpdate(type);
+// 		type = new CustomerType(null, platinum, 0.0, 99999.0, 1.2);
+// 		customerTypeDao.insertOrUpdate(type);
 	}
 
 	/**
