@@ -49,19 +49,13 @@ pipeline {
             steps{
                     
                     echo " ============== docker build =================="
-                    sh '''
-                    docker build -t voopnok/oms:${params.TAG} . 
-                    '''
-                    
-                
+                    sh "docker build -t voopnok/oms:${params.TAG} ."                    
             }
         }
         stage("Docker Push") {
             steps {
                 echo " ============== start pushing image =================="
-                sh '''
-                docker push voopnok/oms:${params.TAG}
-                '''
+                sh "docker push voopnok/oms:${params.TAG}"
             }
         }
     }
