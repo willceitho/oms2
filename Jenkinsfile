@@ -1,3 +1,8 @@
+#!groovy
+// Run docker build
+
+properties([disableConcurrentBuilds()])
+
 pipeline {
     agent {
         docker {
@@ -24,11 +29,11 @@ pipeline {
         stage('Build App') {
             steps{
                 withCredentials([usernamePassword(credentialsId: 'new_key', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
-                    sh 'mvn clean package'
-                    sh 'echo $USERNAME $DOCKERHUB_USERNAME $PS1 $PWD'
-                    sh 'echo $PASSWORD'
-                    echo USERNAME
-                    echo "username is $PASSWORD"
+                    sh '''
+                    mvn clean package
+                    docker build -t voopnok/oms:latest . 
+                    '''
+                    
                 }
             }
         }
