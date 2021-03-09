@@ -15,6 +15,13 @@ pipeline {
 	    	buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
 	    	timestamps()
 	}
+	parameters {
+		choice(
+			name: 'TAG',
+			choices: "latest",
+			description: "Укажите образ для сборки"
+		)
+	} 
     stages {
         stage('Test App') {
             steps {
